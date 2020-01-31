@@ -8,6 +8,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
 
+    flavorDimensions "default"
+
     defaultConfig {
         applicationId "com.example.testazurepipelinesapplication"
         minSdkVersion 23
@@ -20,16 +22,13 @@ android {
     buildTypes {
         debug {
             minifyEnabled true
-            useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
         }
 
-
         release {
-            minifyEnabled false
-            useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
         }
     }
